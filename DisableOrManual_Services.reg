@@ -202,10 +202,6 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DPS]
 "Start"=dword:00000004
 
-; Client License Service
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ClipSVC]
-"Start"=dword:00000004
-
 ; Connected Devies Platform Service
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CDPSvc]
 "Start"=dword:00000004
@@ -338,4 +334,8 @@ Windows Registry Editor Version 5.00
 
 ; UserChoice Protection Driver (UCPD) - disable to be able to change reg values for ShellFeedsTaskbarViewMode/IsFeedsAvailable/TaskbarDa/DeviceRegion
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UCPD]
+"Start"=dword:00000004
+
+; Client License Service // Mandatory for allow msstore app install with winget (set to manual)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ClipSVC]
 "Start"=dword:00000004
