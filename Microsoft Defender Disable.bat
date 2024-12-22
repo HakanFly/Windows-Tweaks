@@ -69,7 +69,7 @@ reg delete "HKCR\Directory\shellex\ContextMenuHandlers\EPP" /f
 reg delete "HKCR\Drive\shellex\ContextMenuHandlers\EPP" /f
 
 rem Disable Stupid Smart App Control blocking legitimate apps like VisualC++ and DX9 / ONCE DISABLED, IT CAN BE ENABLED!
-reg add "HKLM\System\CurrentControlSet\Control\CI\Policy" /v "VerifiedAndRepuatablePolicyState" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\CI\Policy" /v "VerifiedAndReputablePolicyState" /t REG_DWORD /d "0" /f
 
 rem Disable services (it will stop WdFilter.sys as well, better not to disable the driver by itself)
 rem reg add "HKLM\System\CurrentControlSet\Services\WdBoot" /v "Start" /t REG_DWORD /d "4" /f
