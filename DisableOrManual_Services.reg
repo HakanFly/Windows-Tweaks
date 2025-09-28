@@ -34,10 +34,6 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UdkUserSvc]
 "Start"=dword:00000004
 
-; Device Association Service
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DeviceAssociationService]
-"Start"=dword:00000004
-
 ; Network Connected Devices Auto-Setup
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcdAutoSetup]
 "Start"=dword:00000004
@@ -68,10 +64,6 @@ Windows Registry Editor Version 5.00
 
 ; IKE and AuthIP IPsec Keying Modules service
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
-"Start"=dword:00000004
-
-; IP Helper service
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc]
 "Start"=dword:00000004
 
 ; IPsec Policy Agent service
@@ -258,29 +250,6 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WpnService]
 "Start"=dword:00000003
 
-; Windows Image Acquisition (WIA) Service
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\StiSvc]
-"Start"=dword:00000003
-
-; Server Service // mandatory for SMB server and LGTV Companion
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer]
-"Start"=dword:00000002
-
-; Print Spooler Service // Mandatory for Print  (set to manual)
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Spooler]
-"Start"=dword:00000004
-
-; WIFI Services
-; Windows Connection Manager Service // Mandatory for WIFI (set to manual)
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wcmsvc]
-"Start"=dword:00000004
-; WinHTTP Web Proxy Auto-Discovery Service // Mandatory for WIFI (set to manual)
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinHttpAutoProxySvc]
-"Start"=dword:00000004
-; Radio Management Service // Mandatory for WIFI (set to manual)
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RmSvc]
-"Start"=dword:00000004
-
 ; Hyper V Services
 ["HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HvHost"]
 "Start"=dword:00000003
@@ -320,7 +289,10 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000003
 ; Bluetooth Support Service // Mandatory for Bluetooth (set to manual)
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\bthserv]
-"Start"=dword:00000004
+"Start"=dword:00000003
+; Device Association Service // Mandatory for Bluetooth (set to manual)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DeviceAssociationService]
+"Start"=dword:00000003
 
 ; XBOX services
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\XblAuthManager]
@@ -332,10 +304,38 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\XboxNetApiSvc]
 "Start"=dword:00000004
 
+; Windows Image Acquisition (WIA) Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\StiSvc]
+"Start"=dword:00000003
+
+; Server Service // mandatory for SMB server and LGTV Companion
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer]
+"Start"=dword:00000002
+
+; Print Spooler Service // Mandatory for Print  (set to manual)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Spooler]
+"Start"=dword:00000004
+
+; WIFI Services
+; Windows Connection Manager Service // Mandatory for WIFI (set to manual)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wcmsvc]
+"Start"=dword:00000004
+; Radio Management Service // Mandatory for WIFI (set to manual)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RmSvc]
+"Start"=dword:00000004
+; WinHTTP Web Proxy Auto-Discovery Service // Mandatory for WIFI & Tailscale (set to manual)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinHttpAutoProxySvc]
+"Start"=dword:00000003
+
+; Mandatory for Tailscale
+; IP Helper service (set to manual)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc]
+"Start"=dword:00000003
+
 ; UserChoice Protection Driver (UCPD) - disable to be able to change reg values for ShellFeedsTaskbarViewMode/IsFeedsAvailable/TaskbarDa/DeviceRegion
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UCPD]
 "Start"=dword:00000004
 
 ; Client License Service // Mandatory for allow msstore app install with winget (set to manual)
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ClipSVC]
-"Start"=dword:00000004
+"Start"=dword:00000003
