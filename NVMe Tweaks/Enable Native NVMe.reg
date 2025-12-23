@@ -1,6 +1,9 @@
 Windows Registry Editor Version 5.00
 
 ; https://techcommunity.microsoft.com/blog/windowsservernewsandbestpractices/announcing-native-nvme-in-windows-server-2025-ushering-in-a-new-era-of-storage-p/4477353
+; https://www.notebookcheck.net/Windows-11-hack-Higher-SSD-speeds-with-new-Microsoft-NVMe-driver.1190489.0.html
 
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Policies\Microsoft\FeatureManagement\Overrides]
-"1176759950"=dword:00000001
+"735209102"=dword:00000001
+"1853569164"=dword:00000001
+"156965516"=dword:00000001
